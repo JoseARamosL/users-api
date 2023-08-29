@@ -1,6 +1,9 @@
 import { Schema } from 'mongoose';
 
+// Definición del esquema de usuario (UserSchema)
 export const UserSchema = new Schema({
+
+    // Definición de cada campo del esquema
     name: {
         type: String,
         required: true

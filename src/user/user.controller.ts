@@ -2,10 +2,13 @@ import { Controller, Get, Post, Put, Delete, Res, HttpStatus, Body, Param, NotFo
 import { CreateUserDTO } from './dto/user.dto';
 import { UserService } from './user.service';
 
+// Definición del controllador para los usuarios
 @Controller('user')
 export class UserController {
 
     constructor(private userService: UserService) {}
+
+    // Cada método es una ruta para las acciones que va a tener la aplicaión
 
     @Post('/create')
     async createPost(@Res() res, @Body() createUserDTO: CreateUserDTO) {
